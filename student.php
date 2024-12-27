@@ -1,19 +1,9 @@
 <?php
 include "database.php"; 
-
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
-// echo "Connected successfully";
-
 $sql = "SELECT stufid, stufname FROM staff";
 $info = $conn->query($sql);
-
-// if (!$info) {
-//     die("Error fetching teachers: " . $conn->error);
-// }
-// $conn->close();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,18 +18,24 @@ $info = $conn->query($sql);
     <form action="student.php" method="post">
         <div class="text-field">
             <?php 
+                // Process the form submission
                 if (isset($_POST['submit'])) {
                     $student_name = $_POST['student-name']; 
                     $student_age = (int)$_POST['student-age'];
                     $gender = $_POST['gender'];
                     $teacher = $_POST['teacher-id'];
-                    $sql = "INSERT INTO student (name, age, gender, teacherid)
-                    VALUES ('$student_name', $student_age, '$gender', '$teacher')";
-                    if ($conn->query($sql) === TRUE) {
+
+                    // Make sure to use prepared statements to avoid SQL injection
+                    $sql = "INSERT INTO student (name, age, gender, teacherid) VALUES (?, ?, ?, ?)";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("siss", $student_name, $student_age, $gender, $teacher);
+
+                    if ($stmt->execute()) {
                         echo "Added successfully";
                     } else {
-                        echo "Error: " . $sql . "<br>" . $conn->error;
+                        echo "Error: " . $stmt->error;
                     }
+                    $stmt->close();
                 }
             ?>
             <label for="student-name">Student Name</label>
@@ -51,7 +47,7 @@ $info = $conn->query($sql);
                 <input type="radio" name="gender" id="gender-male" value="male" required>
                 <label for="gender">Female</label>
                 <input type="radio" name="gender" id="gender-female" value="female" required><br>
-                <!-- <label for="teacher-id"> Teacher</label> -->
+
                 <select name="teacher-id" id="teacher-id" required>
                     <option value="">Select teacher</option>
                     <?php while ($row = $info->fetch_assoc()) { ?>
@@ -61,15 +57,16 @@ $info = $conn->query($sql);
                     <?php } ?>
                 </select>
             </div>
-            <input type="submit" name="submit" class="" value="Add">
+            <input type="submit" name="submit" value="Add">
+            <a href="authen.php" id="logout">Logout</a>
         </div>
     </form>
-    <a href="index.php">Go to School section</a><br>
-    <a href="staff.php">Go to staff section</a>
+    <?php 
+    include "displaystudent.php";
+    ?>
 </body>
 
 </html>
-
 <?php
-$conn->close();
+
 ?>

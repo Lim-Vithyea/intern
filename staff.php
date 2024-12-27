@@ -69,10 +69,13 @@ $info = $conn->query($sql);
                 <?php } ?>
             </select>
         </div>
-        <input type="submit" name="submit" class="" value="Add"> 
+        <input type="submit" name="submit" class="" value="Add"><br>
+        <a href="index.php">Go to school section</a><br>
+        <a href="authen.php">LogOut</a> 
     </form>
-    <a href="student.php">Go to students section</a><br>
-    <a href="index.php">GO to school section</a>
 </div>
+<?php 
+ include "displayteacher.php"
+?>
 </body>
 </html>
