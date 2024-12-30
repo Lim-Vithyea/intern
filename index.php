@@ -43,6 +43,7 @@ if (isset($_POST['submit'])) {
     </div>
     <a href="staff.php">Go to staff section</a><br>
     <a href="student.php">Go to student section</a>
+    <a href="authen.php">Log Out</a>
     <?php 
     include "displayschool.php";
     ?>

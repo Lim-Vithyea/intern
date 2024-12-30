@@ -45,9 +45,10 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="authen.css">
+    <link rel="stylesheet" href="authenstyle.css">
 </head>
 <body>
+    <h1>Log In</h1>
     <div class="container">
         <div id="box">
             <form action="authen.php" method="post">
