@@ -80,6 +80,9 @@ a {
     margin-top: 10px;
     transition: color 0.3s;
 }
+#logout{
+    color: red;
+}
 
 a:hover {
     color: #0056b3;

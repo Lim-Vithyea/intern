@@ -47,13 +47,9 @@ if ($result->num_rows > 0) {
                 <td>" . htmlspecialchars($row['schlid']) . "</td>
               </tr>";
     }
-
-    // End the table
     echo "</table>";
 } else {
     echo "No data found.";
 }
-
-// Close the connection
 $conn->close();
 ?>

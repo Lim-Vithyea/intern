@@ -27,7 +27,6 @@ $info = $conn->query($sql);
 <body>
 <h1>Add Staff</h1>
 <div>
-    
     <form action="" method="post">
         <?php 
         if (isset($_POST['submit'])) {
@@ -72,10 +71,9 @@ $info = $conn->query($sql);
             </select>
         </div>
         <input type="submit" name="submit" class="" value="Add"><br>
-        
     </form>
     <a href="index.php">Go to school section</a><br>
-    <a href="authen.php">LogOut</a> 
+    <a href="authen.php" id="logout">LogOut</a> 
 </div>
 <?php 
  include "displayteacher.php"
