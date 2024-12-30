@@ -24,11 +24,12 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Add value</h1>
-    <div class="container"> 
+    <h1>School Registeration</h1>
+    <div class="container">
+    <div> 
         <form action="index.php" method="post">
             <label for="school-name">School name</label>
             <input type="text" name="school-name" id="school-name" required>
@@ -38,6 +39,7 @@ if (isset($_POST['submit'])) {
             <br>
             <input type="submit" name="submit" class="login-btn" value="Add"> 
         </form>
+    </div>
     </div>
     <a href="staff.php">Go to staff section</a><br>
     <a href="student.php">Go to student section</a>

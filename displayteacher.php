@@ -6,7 +6,6 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     echo "<style>
             table {
-                margin: 20px;
                 width: 100%;
                 border-collapse: collapse;
                 margin: 20px 0;
@@ -31,7 +30,7 @@ if ($result->num_rows > 0) {
     echo "<tr>
             <th>stuff ID</th>
             <th>stuff Name</th>
-            <th>Gende</th>
+            <th>Gender</th>
             <th>Position</th>
             <th>address</th>
             <th>school ID</th>

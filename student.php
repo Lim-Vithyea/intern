@@ -11,14 +11,14 @@ $info = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="student.css">
 </head>
 
 <body>
+    <h1>Add Student</h1>
     <form action="student.php" method="post">
         <div class="text-field">
             <?php 
-                // Process the form submission
                 if (isset($_POST['submit'])) {
                     $student_name = $_POST['student-name']; 
                     $student_age = (int)$_POST['student-age'];
@@ -58,15 +58,13 @@ $info = $conn->query($sql);
                 </select>
             </div>
             <input type="submit" name="submit" value="Add">
-            <a href="authen.php" id="logout">Logout</a>
+            
         </div>
     </form>
+    <a href="authen.php" id="logout">Logout</a>
     <?php 
     include "displaystudent.php";
     ?>
 </body>
 
 </html>
-<?php
-
-?>

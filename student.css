@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  padding-top: 70px;
+  background: linear-gradient(135deg, #f3f8ff, #c8d9f0);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  text-align: center;
+}
+/* Form Container */
+form {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Labels */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+select {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="radio"] {
+  margin-left: 10px;
+  accent-color: #007bff; 
+}
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Links */
+a {
+  color: #ff0000;
+  text-decoration: none;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  form {
+      width: 100%;
+      margin: 10px;
+      box-shadow: none;
+  }
+
+  input[type="submit"] {
+      font-size: 14px;
+      padding: 10px;
+  }
+}

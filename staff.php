@@ -22,10 +22,12 @@ $info = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Form</title>
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="staff.css">
 </head>
 <body>
+<h1>Add Staff</h1>
 <div>
+    
     <form action="" method="post">
         <?php 
         if (isset($_POST['submit'])) {
@@ -70,9 +72,10 @@ $info = $conn->query($sql);
             </select>
         </div>
         <input type="submit" name="submit" class="" value="Add"><br>
-        <a href="index.php">Go to school section</a><br>
-        <a href="authen.php">LogOut</a> 
+        
     </form>
+    <a href="index.php">Go to school section</a><br>
+    <a href="authen.php">LogOut</a> 
 </div>
 <?php 
  include "displayteacher.php"
