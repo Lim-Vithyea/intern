@@ -73,10 +73,10 @@ $info = $conn->query($sql);
         <input type="submit" name="submit" class="" value="Add"><br>
     </form>
     <a href="index.php">Go to school section</a><br>
-    <a href="authen.php" id="logout">LogOut</a> 
 </div>
 <?php 
  include "displayteacher.php"
 ?>
+<a href="authen.php" id="logout">LogOut</a> 
 </body>
 </html>
