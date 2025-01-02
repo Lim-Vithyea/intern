@@ -26,12 +26,12 @@ if ($total > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style5.css"> <!-- Include the external CSS file -->
+    <link rel="stylesheet" href="style5.css"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </head>
 <body>
     <div class="container mt-4">
-        <h1 class="mb-4 text-center" stye>Dashboard</h1>
+        <h1 class="mb-4 text-center" style="color:blue">Data Dashboard</h1>
         <div class="row">
             <?php
             // Data for the cards
@@ -63,7 +63,7 @@ if ($total > 0) {
             }
             ?>
         </div>
-        <div style="
+        <!-- <div style="
             background: blue;
             width: 300px;
             height: 50px;
@@ -71,15 +71,24 @@ if ($total > 0) {
             justify-content:center;
             text-align:center;
             border-radius: 10px;
-            align-items:center;">
-    <a href="index.php" style="
-        font-weight: bold;
-        color: white;
-        padding: 10px 10px 10px 10px;
-        ">Add data</a>
+            align-items:center;
+            "> -->
+            <button style="
+            background: blue;
+            width: 300px;
+            height: 50px;
+            display: flex;
+            justify-content:center;
+            text-align:center;
+            border-radius: 10px;
+            align-items:center;
+            border: none;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+            ">
+            <a href="index.php" style="font-weight: bold;color: white;padding: 10px 10px 10px 10px;">Add data</a>
+            </button>
     </div>
-    </div>
-   
     <!-- Chart Container -->
     <div class="chart-container d-flex justify-content-center flex-wrap " style="width: 80%; margin: 50px auto;">
         <!-- Horizontal Bar Chart -->
