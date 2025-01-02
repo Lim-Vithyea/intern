@@ -63,9 +63,23 @@ if ($total > 0) {
             }
             ?>
         </div>
-        <a href="student.php">Go back to Student</a>
+        <div style="
+    background: blue;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content:center;
+    text-align:center;
+    border-radius: 10px;
+    ">
+    <a href="index.php" style="
+        font-weight: bold;
+        color: white;
+        padding: 10px 10px 10px 10px;
+        ">Add data</a>
     </div>
-
+    </div>
+   
     <!-- Chart Container -->
     <div class="chart-container" style="width: 80%; margin: 50px auto;">
         <!-- Horizontal Bar Chart -->

@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             if (password_verify($password, $hashed_password)) {
                 if ($user['userrole'] == 1) {
-                    header("Location: index.php"); 
+                    header("Location: chart.php"); 
                     exit();
                 } elseif ($user['userrole'] == 2) {
                     header("Location: student.php"); // User page

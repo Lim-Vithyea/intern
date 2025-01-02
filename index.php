@@ -17,7 +17,6 @@ if (isset($_POST['submit'])) {
 //     $conn->close();
  }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

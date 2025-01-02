@@ -62,9 +62,7 @@ $info = $conn->query($sql);
         </div>
     </form>
     <a href="authen.php" id="logout">Logout</a>
-    <?php 
-    include "displaystudent.php";
-    ?>
+
 </body>
 
 </html>
