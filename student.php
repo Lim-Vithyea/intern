@@ -61,8 +61,8 @@ $info = $conn->query($sql);
             
         </div>
     </form>
+    <?php include"displaystudent.php" ?>
     <a href="authen.php" id="logout">Logout</a>
-
 </body>
 
 </html>

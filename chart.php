@@ -31,7 +31,7 @@ if ($total > 0) {
 </head>
 <body>
     <div class="container mt-4">
-        <h1 class="mb-4">Dashboard</h1>
+        <h1 class="mb-4 text-center" stye>Dashboard</h1>
         <div class="row">
             <?php
             // Data for the cards
@@ -64,14 +64,14 @@ if ($total > 0) {
             ?>
         </div>
         <div style="
-    background: blue;
-    width: 300px;
-    height: 50px;
-    display: flex;
-    justify-content:center;
-    text-align:center;
-    border-radius: 10px;
-    ">
+            background: blue;
+            width: 300px;
+            height: 50px;
+            display: flex;
+            justify-content:center;
+            text-align:center;
+            border-radius: 10px;
+            align-items:center;">
     <a href="index.php" style="
         font-weight: bold;
         color: white;
@@ -81,7 +81,7 @@ if ($total > 0) {
     </div>
    
     <!-- Chart Container -->
-    <div class="chart-container" style="width: 80%; margin: 50px auto;">
+    <div class="chart-container d-flex justify-content-center flex-wrap " style="width: 80%; margin: 50px auto;">
         <!-- Horizontal Bar Chart -->
         <div class="chart" style="width: 50%; margin-bottom: 50px;">
             <canvas id="horizontalBarChart"></canvas>
