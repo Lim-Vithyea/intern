@@ -63,16 +63,6 @@ if ($total > 0) {
             }
             ?>
         </div>
-        <!-- <div style="
-            background: blue;
-            width: 300px;
-            height: 50px;
-            display: flex;
-            justify-content:center;
-            text-align:center;
-            border-radius: 10px;
-            align-items:center;
-            "> -->
             <button style="
             background: blue;
             width: 300px;
@@ -90,7 +80,7 @@ if ($total > 0) {
             </button>
     </div>
     <!-- Chart Container -->
-    <div class="chart-container d-flex justify-content-center flex-wrap " style="width: 80%; margin: 50px auto;">
+    <div class="chart-container d-flex justify-content-center flex-wrap" style="width: 80%; margin: 50px auto;">
         <!-- Horizontal Bar Chart -->
         <div class="chart" style="width: 50%; margin-bottom: 50px;">
             <canvas id="horizontalBarChart"></canvas>
@@ -209,5 +199,15 @@ if ($total > 0) {
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="d-flex justify-content-center flex-wrap p-5">
+    <h1 class="text-center" style="font-size:25px">School</h1>
+    <?php include"displayschool.php" ?>
+    <h1 class="text-center" style="font-size:25px">Staff</h1>
+    <?php include"displayteacher.php" ?>
+    <h1 class="text-center" style="font-size:25px">Student</h1>
+    <?php include"displaystudent.php" ?>
+    </div>
+    
 </body>
 </html>
+
